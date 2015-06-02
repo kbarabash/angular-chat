@@ -1,0 +1,48 @@
+{
+    "path": "build/",
+    "access": 511,
+    "commands": ["js-checker", "libs-install", "template-builder", "build-css"],
+    "indexHtml": {
+        "src": "app/index.html",
+        "filename": "index.html",
+        "versionFile": ".version",
+        "replace": {
+            "from": "<script >var version = 'debug'</script>",
+            "to": "<script >var version = '{%version%}'</script>",
+            "key": "{%version%}"
+        }
+    },
+    "js": {
+        "appjs": {
+            "src": "app/js/**/*.js",
+            "ignore": [
+                "app/js/app.js",
+                "app/js/libs.js"
+            ],
+            "priority": {
+                "high": [
+                    "_module.js",
+                    "app/js/core/"
+                ],
+                "low": [
+                    "app/js/bin/",
+                    "app/js/init.js"
+                ]
+            },
+            "filename": "app.js"
+        },
+        "libsjs": {
+            "src": "app/js/libs.js",
+            "filename": "libs.js"
+        },
+        "isMinify": true,
+        "isCreateSourceMap": true,
+        "path": "js/"
+    },
+    "content": {
+        "src": "app/content",
+        "ignore": ["app/content/css/scss"],
+        "dest": "content"
+    },
+    "encode": "utf8"
+}

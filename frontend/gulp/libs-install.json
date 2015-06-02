@@ -1,0 +1,29 @@
+{
+    "concat": {
+        "defaultType": "PRODUCTION",
+        "filename": "libs.js",
+        "dest": "app/js/",
+        "libsPath": "node_modules/bower_components/",
+        "types": {
+            "DEV": {
+                "files": [
+                    "angular/angular.js",
+                    "angular-ui-router/release/angular-ui-router.js"
+                ],
+                "isMinify": false
+            },
+            "PRODUCTION": {
+                "files": [
+                    "angular/angular.min.js",
+                    "angular-ui-router/release/angular-ui-router.min.js"
+                ],
+                "isMinify": true
+            }
+        }
+    },
+    "commands": [
+        "node_modules/.bin/bower cache clean",
+        "node_modules/.bin/bower install -p",
+        "node_modules/.bin/bower update"
+    ]
+}

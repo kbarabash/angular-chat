@@ -1,0 +1,32 @@
+{
+    "modulePath": "app/js/modules/",
+    "template": {
+        "replaceKeys": {
+            "module": "{%module.name%}",
+            "controller": "{%controller.name%}"
+        },
+        "path": "gulp/js/create-module/",
+        "files": [{
+            "filename": "_module.js",
+            "template": "_module.template",
+            "path": "./"
+        }, {
+            "filename": "{%controller.name%}.controller.js",
+            "template": "main.controller.template",
+            "path": "controllers/"
+        }, {
+            "filename": "router.config.js",
+            "template": "router.config.template",
+            "path": "config/"
+        }, {
+            "filename": "{%controller.name%}.html",
+            "template": "main.template",
+            "path": "view/"
+        }]
+    },
+    "default": {
+        "controller": "MainController"
+    },
+    "access": 511,
+    "encode": "utf8"
+}

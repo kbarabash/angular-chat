@@ -1,0 +1,33 @@
+<div ng-controller="Test1Controller as test1Controller">
+    <h1>{{test1Controller.title}}</h1>
+    <div>{{test1Controller.text}}</div>
+    <br/>
+    <br/>
+    <div>
+        <form name="UserForm">
+            <div>
+                <span>Name:</span>
+                <span>
+                    <input name="name" ng-model="test1Controller.user.name" required ngTrim="true"/>
+                </span>
+                <div class="error" ng-show="UserForm.name.$error.required">
+                    Required Field!
+                </div>
+            </div>
+            <div>
+                <span>Date:</span>
+                <span>
+                    <input name="date" type="date" ng-model="test1Controller.user.date" required ngTrim="true"/>
+                </span>
+                <div class="error" ng-show="UserForm.date.$error.required">
+                    Required Field!
+                </div>
+            </div>
+        </form>
+    </div>
+    <div>
+        <h1>Result</h1>
+        <div>Name: {{test1Controller.user.name}}</div>
+        <div>Date: {{test1Controller.user.date | date :longDate}}</div>
+    </div>
+</div>

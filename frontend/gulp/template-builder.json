@@ -1,0 +1,9 @@
+{
+    "src": "app/js/**/*.html",
+    "access": 511,
+    "dest": "app/js/bin/view/",
+    "filename": "templates.js",
+    "module": "app.service",
+    "templateHeader": "(function() {\n    angular.module(\"<%= module %>\"<%= standalone %>)\n       .run(['$templateCache', function($templateCache) {\n              ",
+    "templateFooter": "\n       }]);\n})();"
+}

@@ -1,0 +1,3 @@
+<div ng-controller="{%controller.name%}Controller as ctrl">
+    <p>Hello from {%module.name%}.{%controller.name%}Controller</p>
+</div>

@@ -1,0 +1,11 @@
+// Module: "{%module.name%}"
+(function() {
+    'use strict';
+
+    angular.module('{%module.name%}', ['app.service'])
+        .run(['routerService', '{%module.name%}.router.config',
+            function(routerService, routerConfig) {
+                routerService.stateByConfig(routerConfig);
+            }
+        ]);
+})();

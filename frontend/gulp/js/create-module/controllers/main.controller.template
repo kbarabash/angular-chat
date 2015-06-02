@@ -1,0 +1,8 @@
+(function() {
+    'use strict';
+
+    function {%controller.name%}Controller() {}
+
+    angular.module('{%module.name%}')
+        .controller('{%controller.name%}Controller', {%controller.name%}Controller);
+})();

@@ -1,0 +1,15 @@
+<div class="coll border-right" >
+    <div class="title title-coll">
+        {{ctrl.title}}
+    </div>
+    <div class="data">
+        <div ng-repeat="item in ctrl.data">
+            <div class="title title-data" ng-click="item.isShowData = !item.isShowData">
+                {{item.name ? 'a': item.name}} ({{item.data.length}})
+            </div>
+            <div ng-show="item.isShowData" class="line-data" ng-repeat="data in item.data">
+                <div>{{data.text}}</div>
+            </div>
+        </div>
+    </div>
+</div>

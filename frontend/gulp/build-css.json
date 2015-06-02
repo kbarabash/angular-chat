@@ -1,0 +1,4 @@
+{
+    "src": ["app/content/css/scss/main.scss"],
+    "dest": "app/content/css/"
+}

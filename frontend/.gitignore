@@ -1,0 +1,12 @@
+#default
+.idea
+node_modules
+npm-debug.log
+build
+
+#other files
+app/js/bin
+app/js/libs.js
+app/js/app.js
+app/content/css/main.css
+gulp/tmp
