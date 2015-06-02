@@ -3,6 +3,7 @@
     'use strict';
 
     angular.module('chat', [
-        'chat.feed'
+        'chat.feed',
+        'chat.form'
     ]);
 })();
