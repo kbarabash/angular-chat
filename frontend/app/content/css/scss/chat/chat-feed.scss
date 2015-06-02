@@ -1,0 +1,26 @@
+.chat-feed {
+    height: 94%;
+    overflow: auto;
+    position: relative;
+    margin-bottom: 8px;
+}
+.chat-message {
+
+    &__name {
+        font-weight: bold;
+
+        &:after {
+            content: ":";
+        }
+    }
+
+    &__text {
+
+    }
+
+    &__date {
+        text-decoration: underline;
+    }
+
+    margin: 5px 0;
+}

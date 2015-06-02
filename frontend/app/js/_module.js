@@ -8,12 +8,8 @@
         'app.config',
 
         //modules
-        'test1',
-        'test2',
-        'table',
 
         //shared
-        'menu',
         'tools'
     ]);
 })();

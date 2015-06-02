@@ -1,9 +1,9 @@
-@import "tools/tools";
-@import "components/test-component";
-@import "shared/shared";
-@import "mixin/mixin.scss";
-@import "modules/modules";
-
-.content {
-    margin-left: 10px;
+html, body {
+    height: 100%;
 }
+
+@import "tools/tools";
+@import "chat/chat";
+@import "shared/shared";
+@import "mixin/mixin";
+@import "modules/modules";

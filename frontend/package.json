@@ -1,7 +1,7 @@
 {
     "author": "Test Project Angular",
     "private": true,
-    "name": "Test Project Angular",
+    "name": "Test_Project_Angular",
     "version": "0.0.1",
     "dependencies": {
         "gulp": "3.8.11",

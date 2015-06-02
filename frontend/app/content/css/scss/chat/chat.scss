@@ -1,0 +1,10 @@
+.chat {
+    @import "variables";
+    @import "chat-feed";
+    @import "chat-form";
+
+
+    height: $container-height - 1;
+    width: $container-width - 1;
+    padding-left: 1%;
+}
