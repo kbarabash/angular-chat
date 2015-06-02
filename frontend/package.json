@@ -1,7 +1,7 @@
 {
-    "author": "Angular-app",
+    "author": "Test Project Angular",
     "private": true,
-    "name": "Angular-app",
+    "name": "Test Project Angular",
     "version": "0.0.1",
     "dependencies": {
         "gulp": "3.8.11",
@@ -49,6 +49,7 @@
         "server": "./node_modules/.bin/http-server app/ -a localhost -p 8000 -c-1",
         "server-build": "./node_modules/.bin/http-server build/ -a localhost -p 8000 -c-1",
         "start": "npm run libs-install;npm run build-css;npm run template-builder;npm run register-files;",
+        "watch": "./node_modules/.bin/gulp watch",
         "libs-install": "./node_modules/.bin/gulp libs-install --type dev",
         "libs-install-production": "./node_modules/.bin/gulp libs-install --type production",
         "js-checker": "./node_modules/.bin/gulp js-checker",
