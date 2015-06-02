@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    function ChatFormCtrl( ) {
+    function ChatFormCtrl() {
     }
 
     function ChatFormDirective($templateCache) {
