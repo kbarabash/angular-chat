@@ -1,0 +1,30 @@
+{
+    "name": "angular-chat-backend",
+    "version": "0.0.0",
+    "description": "Server side of angular chat",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/kbarabash/angular-chat.git"
+    },
+    "keywords": [
+        "chat",
+        "angular",
+        "nodeJs"
+    ],
+    "author": "",
+    "license": "BSD-2-Clause",
+    "bugs": {
+        "url": "https://github.com/kbarabash/angular-chat/issues"
+    },
+    "dependencies": {
+        "forever": "0.14.1",
+        "forever-monitor": "1.5.2",
+        "express": "4.12.4",
+        "websocket": "1.0.17"
+    }
+}
