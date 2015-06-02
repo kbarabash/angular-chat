@@ -1,0 +1,9 @@
+@import "tools/tools";
+@import "components/test-component";
+@import "shared/shared";
+@import "mixin/mixin.scss";
+@import "modules/modules";
+
+.content {
+    margin-left: 10px;
+}

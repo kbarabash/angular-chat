@@ -1,0 +1,19 @@
+{
+    "jshint": {
+        "options": {
+            "lookup": ".jshintrc"
+        }
+    },
+    "src": [
+        "!gulp/tmp/**/*",
+        "!app/js/libs.js",
+        "!app/js/app.js",
+        "!app/js/bin/**/*.js",
+
+        "app/**/*.js",
+        "app/*.js",
+        "gulp/**/*.js",
+        "gulpfile.js",
+        "tests/**/*.js"
+    ]
+}

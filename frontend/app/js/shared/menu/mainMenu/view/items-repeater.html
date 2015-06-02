@@ -1,0 +1,12 @@
+<li ng-repeat="item in items" class="main-menu__item" ng-switch on="item.type">
+    <span ng-switch-when="link" >
+        <ng-include src="'shared/menu/mainMenu/view/types/link.html'"></ng-include>
+    </span>
+    <span ng-switch-when="title" >
+        <ng-include src="'shared/menu/mainMenu/view/types/title.html'"></ng-include>
+    </span>
+    <span ng-switch-default>
+        <ng-include src="'shared/menu/mainMenu/view/types/link.html'"></ng-include>
+    </span>
+    <ul class="main-menu__items-container main-menu__container-type_submenu" ng-if="item.subItems" ng-include="'shared/menu/mainMenu/view/items-repeater.html'" ng-init="items=item.subItems"></ul>
+</li>

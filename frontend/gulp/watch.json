@@ -1,0 +1,28 @@
+{
+    "css": {
+        "files": [
+            "app/content/css/scss/**/*.scss",
+            "app/content/css/scss/**/*.css"
+        ],
+        "tasks": ["build-css"]
+    },
+    "js": {
+        "files": [
+            "app/js/**/*.js",
+            "!app/js/bin/**",
+            "!app/js.app.js",
+            "!app/js/libs.js"
+        ],
+        "tasks": [
+            "register-files"
+        ]
+    },
+    "html": {
+        "files": [
+            "app/js/**/*.html"
+        ],
+        "tasks": [
+            "template-builder"
+        ]
+    }
+}

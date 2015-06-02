@@ -1,0 +1,8 @@
+{
+    "name": "Angular-test",
+    "version": "0.0.1",
+    "dependencies": {
+        "angular": "1.4.*",
+        "angular-ui-router": "0.2.14"
+    }
+}

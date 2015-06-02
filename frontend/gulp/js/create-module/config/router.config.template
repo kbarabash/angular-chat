@@ -1,0 +1,9 @@
+(function() {
+    angular.module('{%module.name%}')
+        .constant('{%module.name%}.router.config', {
+            '{%module.name%}': {
+                url: '/{%module.name%}',
+                template: 'modules/{%module.name%}/view/{%controller.name%}.html'
+            }
+        });
+})();

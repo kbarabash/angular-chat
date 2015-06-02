@@ -1,0 +1,23 @@
+{
+    "loader": {
+        "dest": "app/js/app.js",
+        "template": "gulp/js/register-files/app.template.js",
+        "replaceKey": "'{%file_list%}'",
+        "encode": "utf8"
+    },
+    "src": "app/js/**/*.js",
+    "ignore": [
+        "app/js/app.js",
+        "app/js/libs.js"
+    ],
+    "priority": {
+        "high": [
+            "_module.js",
+            "app/js/core/"
+        ],
+        "low": [
+            "app/js/bin/",
+            "app/js/init.js"
+        ]
+    }
+}
