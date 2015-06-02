@@ -8,7 +8,7 @@
         'app.config',
 
         //modules
-
+        'chat',
         //shared
         'tools'
     ]);
