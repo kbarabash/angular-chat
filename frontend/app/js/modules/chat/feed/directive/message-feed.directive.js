@@ -20,7 +20,7 @@
             template: $templateCache.get('modules/chat/feed/view/message-feed.directive.html'),
             controller: ['$scope', MessageFeedController],
             controllerAs: 'ctrl'
-        }
+        };
     }
 
     angular.module('chat.feed')

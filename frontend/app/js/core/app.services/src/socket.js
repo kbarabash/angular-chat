@@ -93,7 +93,7 @@
                 } else {
                     socket = new WebSocket(config.url);
                 }
-            } catch(e) {
+            } catch (e) {
                 onError(e);
                 return false;
             }
