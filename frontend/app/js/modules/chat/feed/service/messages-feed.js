@@ -7,12 +7,10 @@
         }
 
         this.em = eventManagerService.create();
-        var messageCollection = [];
 
         var addMessage = function(e) {
             e.params.date = new Date();
-            messageCollection.push(e.params);
-            this.em.trigger('updateMessages', messageCollection);
+            this.em.trigger('updateMessages', e.params);
         }.bind(this);
 
         chatSocketService.on('message', addMessage);
