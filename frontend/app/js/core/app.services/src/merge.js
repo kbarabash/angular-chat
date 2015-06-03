@@ -6,7 +6,7 @@
             var stack = arguments[0];
             for (var k = 1, ln = arguments.length; k < ln; k++) {
                 var object = arguments[k];
-                if (typeof (object) != 'object') {
+                if (typeof (object) !== 'object') {
                     continue;
                 }
                 for (var i in object) {
@@ -14,9 +14,9 @@
                         continue;
                     }
                     if (null !== stack[i]
-                        && typeof (stack[i]) == 'object'
+                        && typeof (stack[i]) === 'object'
                         && object[i]
-                        && typeof (object[i]) == 'object'
+                        && typeof (object[i]) === 'object'
                         && !object[i].nodeType
                         && !Array.isArray(object[i])
                     ) {

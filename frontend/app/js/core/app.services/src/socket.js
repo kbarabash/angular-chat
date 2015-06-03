@@ -31,7 +31,7 @@
         var checkConfig = function(config) {
             return merge({
                 attempts: 0,
-                attempts_timeout: DEFAULT_ATTEMPTS_TIMEOUT,
+                attemptsTimeout: DEFAULT_ATTEMPTS_TIMEOUT,
                 url: '',
                 isUseEchoProtocol: false
             }, config);
@@ -67,7 +67,9 @@
 
                 if (isStartReconnect) {
                     reconnectAttempts++;
-                    reconnectTimeout = setTimeout(this.connection.bind(this), config.attempts_timeout);
+                    reconnectTimeout = window.setTimeout(
+                        this.connection.bind(this), config.attemptsTimeout
+                    );
                 }
                 em.trigger('close', closeEvent);
             },

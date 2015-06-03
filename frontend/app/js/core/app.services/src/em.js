@@ -10,7 +10,7 @@
     };
 
     var getListenerIndex = function(eventName, listener, cntx) {
-        var eventCollections = (cntx.eventCollections[eventName]||[]);
+        var eventCollections = cntx.eventCollections[eventName] || [];
         for (var i = 0, l = eventCollections.length; i < l; i++) {
             if (listener === eventCollections[i].listener) {
                 return i;
@@ -148,7 +148,7 @@
             create: function() {
                 return new EventManager();
             }
-        }
+        };
     }
 
     angular.module('app.service')
