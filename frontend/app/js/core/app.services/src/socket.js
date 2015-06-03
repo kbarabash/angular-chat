@@ -32,7 +32,8 @@
             return merge({
                 attempts: 0,
                 attempts_timeout: DEFAULT_ATTEMPTS_TIMEOUT,
-                url: ''
+                url: '',
+                isUseEchoProtocol: false
             }, config);
         };
 
@@ -59,8 +60,8 @@
                 socket = null;
                 var isStartReconnect = closeEvent.code !== CloseCodes.CLOSE_NORMAL
                     && (
-                    INFINITE_COUNT_OF_ATTEMPTS === config.attempts
-                    || config.attempts > reconnectAttempts
+                        INFINITE_COUNT_OF_ATTEMPTS === config.attempts
+                        || config.attempts > reconnectAttempts
                     );
 
                 if (isStartReconnect) {
@@ -101,7 +102,11 @@
             }
 
             try {
-                socket = new WebSocket(config.url);
+                if (config.isUseEchoProtocol) {
+                    socket = new WebSocket(config.url, 'echo-protocol');
+                } else {
+                    socket = new WebSocket(config.url);
+                }
             } catch (e) {
                 onError(e);
                 return false;
@@ -134,7 +139,7 @@
             return socket && socket.readyState === IS_OPEN_STATE;
         };
 
-        this.sendMessage = function(message) {
+        this.send = function(message) {
             if (!this.isOpenConnection()) {
                 sendMessageCollection.push(message);
             } else {

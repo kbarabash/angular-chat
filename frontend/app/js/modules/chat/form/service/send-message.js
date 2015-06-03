@@ -8,7 +8,10 @@
                     throw new Error('Error connect');
                 }
             }
-            console.log(message);
+            dataProvider.send(JSON.stringify({
+                message: message,
+                name: 'user1'
+            }));
         };
     }
 
