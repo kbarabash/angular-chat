@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    function ChatFormCtrl() {
+    function ChatFormCtrl(sendMessageService) {
         this.model = {
             message: ''
         };
@@ -10,7 +10,7 @@
             if (!this.model.message) {
                 return;
             }
-            console.log(this.model.message);
+            sendMessageService.send(this.model.message);
         };
     }
 
@@ -19,7 +19,7 @@
             restrict: 'E',
             template: $templateCache.get('modules/chat/form/view/form.html'),
             controllerAs: 'ctrl',
-            controller: ChatFormCtrl
+            controller: ['sendMessageService', ChatFormCtrl]
         };
     }
 

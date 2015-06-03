@@ -2,5 +2,7 @@
 (function() {
     'use strict';
 
-    angular.module('chat.form', []);
+    angular.module('chat.form', [
+        'chat.provider'
+    ]);
 })();
