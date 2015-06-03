@@ -14,7 +14,6 @@
             CLOSE_ABNORMAL: 1006,
             CLOSE_TOO_LARGE: 1009
         };
-        var ERROR_STATUS = 'error';
         var IS_OPEN_STATE = 1;
         var INFINITE_COUNT_OF_ATTEMPTS = -1;
         var DEFAULT_ATTEMPTS_TIMEOUT = 10 * 1000;
@@ -38,17 +37,6 @@
         };
 
         checkConfig(config);
-
-        this.setConfig = function(newConfig) {
-            if (newConfig) {
-                config = checkConfig(newConfig);
-            }
-            return this;
-        };
-
-        this.getConfig = function() {
-            return config;
-        };
         //endregion
         var onError = function(errorEvent) {
             em.trigger('error', errorEvent);
@@ -57,7 +45,7 @@
 
         //region socket events
         var socketEvents = {
-            onclose: function(closeEvent) {
+            onClose: function(closeEvent) {
                 socket = null;
                 var isStartReconnect = closeEvent.code !== CloseCodes.CLOSE_NORMAL
                     && (
@@ -73,22 +61,17 @@
                 }
                 em.trigger('close', closeEvent);
             },
-            onerror: onError,
-            onopen: function(openEvent) {
+            onError: onError,
+            onOpen: function(openEvent) {
                 reconnectAttempts = 0;
                 while (sendMessageCollection.length) {
                     var message = sendMessageCollection.shift();
-                    socket.send(message);
+                    this.send(message);
                 }
                 em.trigger('open', openEvent);
             },
-            onmessage: function(messageEvent) {
-                var parsedResult = JSON.parse(messageEvent.data);
-                if (parsedResult.status === ERROR_STATUS) {
-                    onError(messageEvent);
-                    return;
-                }
-                em.trigger('message', messageEvent);
+            onMessage: function(messageEvent) {
+                em.trigger('message', JSON.parse(messageEvent.data));
             }
         };
         //endregion
@@ -115,9 +98,10 @@
                 return false;
             }
 
-            for (var func in socketEvents) {
-                socket[func] = socketEvents[func].bind(this);
-            }
+            socket.onclose = socketEvents.onClose.bind(this);
+            socket.onmessage = socketEvents.onMessage.bind(this);
+            socket.onerror = socketEvents.onError.bind(this);
+            socket.onopen = socketEvents.onOpen.bind(this);
             return true;
         };
 
@@ -147,12 +131,24 @@
                 sendMessageCollection.push(message);
             } else {
                 socket.send(message);
+                em.trigger('sendMessage', message);
             }
             return this;
         };
 
-        this.on = em.on;
-        this.off = em.off;
+        this.setConfig = function(newConfig) {
+            if (newConfig) {
+                config = checkConfig(newConfig);
+            }
+            return this;
+        };
+
+        this.getConfig = function() {
+            return config;
+        };
+
+        this.on = em.on.bind(em);
+        this.off = em.off.bind(em);
         //endregion
     }
 
