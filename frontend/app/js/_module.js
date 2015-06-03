@@ -9,7 +9,6 @@
 
         //modules
         'chat',
-
         //shared
         'tools'
     ]);
