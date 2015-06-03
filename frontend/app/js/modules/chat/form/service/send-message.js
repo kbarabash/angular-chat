@@ -6,10 +6,10 @@
             if (!dataProvider.isOpenConnection()) {
                 dataProvider.connection();
             }
-            dataProvider.send(JSON.stringify({
+            dataProvider.send({
                 message: model.message,
                 name: model.name
-            }));
+            });
             return true;
         };
     }
