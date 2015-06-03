@@ -1,8 +1,18 @@
 .chat-form {
     width: 100%;
-}
-.chat-form__message {
-    width: 88%;
+
+    &__username {
+        font-size: 14px;
+        width: 20%;
+        display: inline;
+        line-height: 27px;
+        margin-right: 6px;
+        font-weight: bold
+    }
+
+    &__message {
+        width: 83%;
+    }
 }
 
 .ng-valid {
