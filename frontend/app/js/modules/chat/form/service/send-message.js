@@ -2,13 +2,13 @@
     'use strict';
 
     function SendMessageService(dataProvider) {
-        this.send = function(message) {
+        this.send = function(model) {
             if (!dataProvider.isOpenConnection()) {
                 dataProvider.connection();
             }
             dataProvider.send(JSON.stringify({
-                message: message,
-                name: 'user1'
+                message: model.message,
+                name: model.name
             }));
             return true;
         };
