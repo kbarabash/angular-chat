@@ -1,16 +1,15 @@
 (function() {
     'use strict';
 
-    function MessageFeedController($scope) {
-        $scope.messages = [{
-            message: '123123',
-            username: '123123',
-            date: new Date()
-        }, {
-            message: 'asqwerwq',
-            username: '12rwqrqwrwqr3123',
-            date: new Date()
-        }];
+    function MessageFeedController(messagesFeedService) {
+        this.model= {
+            messages: []
+        };
+
+        var updateMessages = function (e) {
+            this.model.messages = e.params;
+        }.bind(this);
+        messagesFeedService.em.on('updateMessages', updateMessages);
     }
 
     function MessageFeedDirective($templateCache) {
@@ -18,7 +17,7 @@
             restrict: 'AEC',
             replace: true,
             template: $templateCache.get('modules/chat/feed/view/message-feed.directive.html'),
-            controller: ['$scope', MessageFeedController],
+            controller: ['messagesFeedService', MessageFeedController],
             controllerAs: 'ctrl'
         };
     }

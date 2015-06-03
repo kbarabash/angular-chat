@@ -1,7 +1,7 @@
 <div class="chat-feed">
-    <div class="chat-message" ng-repeat="item in messages">
+    <div class="chat-message" ng-repeat="item in ctrl.model.messages">
         <span class="chat-message__date">[{{item.date | date:"MM.dd.yyyy HH:mm"}}]</span>
-        <span class="chat-message__name">{{item.username}}</span>
+        <span class="chat-message__name">{{item.name}}</span>
         <span class="chat-message__text">{{item.message}}</span>
     </div>
 </div>
