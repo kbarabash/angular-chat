@@ -5,6 +5,7 @@
             placeholder="Type something..."
             ng-model="ctrl.model.message"
             ngTrim="true"
+            ng-keypress="ctrl.keyPress($event)"
         >
     <button class="btn btn-success" type="button" ng-click="ctrl.sendMessage()">
         <span class="icon-play"></span>Send
