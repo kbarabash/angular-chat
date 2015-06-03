@@ -1,2 +1,4 @@
 backend/node_modules
+backend/npm-debug.log
+npm-debug.log
 .idea/**/*

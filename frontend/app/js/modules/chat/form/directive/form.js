@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    function ChatFormCtrl() {
+    function ChatFormCtrl(sendMessageService, logger) {
         this.model = {
             message: ''
         };
@@ -10,7 +10,11 @@
             if (!this.model.message) {
                 return;
             }
-            console.log(this.model.message);
+            var result = sendMessageService.send(this.model.message);
+            if (result) {
+                logger.log('Message sent "' + this.model.message + '"', 'chat.form');
+                this.model.message = '';
+            }
         };
     }
 
@@ -19,7 +23,7 @@
             restrict: 'E',
             template: $templateCache.get('modules/chat/form/view/form.html'),
             controllerAs: 'ctrl',
-            controller: ChatFormCtrl
+            controller: ['sendMessageService', 'loggerService', ChatFormCtrl]
         };
     }
 
