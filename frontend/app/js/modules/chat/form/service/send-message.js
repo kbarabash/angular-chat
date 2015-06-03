@@ -8,7 +8,8 @@
             }
             dataProvider.send({
                 message: model.message,
-                name: model.name
+                name: model.name,
+                date: Date.now()
             });
             return true;
         };

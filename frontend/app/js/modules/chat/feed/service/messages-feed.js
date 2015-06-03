@@ -9,7 +9,6 @@
         this.em = eventManagerService.create();
 
         var addMessage = function(e) {
-            e.params.date = new Date();
             this.em.trigger('updateMessages', e.params);
         }.bind(this);
 
