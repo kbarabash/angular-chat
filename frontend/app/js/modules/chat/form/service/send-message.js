@@ -4,14 +4,13 @@
     function SendMessageService(dataProvider) {
         this.send = function(message) {
             if (!dataProvider.isOpenConnection()) {
-                if (!dataProvider.connection()) {
-                    throw new Error('Error connect');
-                }
+                dataProvider.connection();
             }
             dataProvider.send(JSON.stringify({
                 message: message,
                 name: 'user1'
             }));
+            return true;
         };
     }
 

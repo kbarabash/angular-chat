@@ -52,7 +52,8 @@
         //endregion
         var onError = function(errorEvent) {
             em.trigger('error', errorEvent);
-        };
+            this.abort(true);
+        }.bind(this);
 
         //region socket events
         var socketEvents = {
@@ -147,6 +148,9 @@
             }
             return this;
         };
+
+        this.on = em.on;
+        this.off = em.off;
         //endregion
     }
 
