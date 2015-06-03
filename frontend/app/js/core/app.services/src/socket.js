@@ -130,7 +130,7 @@
             if (!this.isOpenConnection()) {
                 sendMessageCollection.push(message);
             } else {
-                socket.send(message);
+                socket.send(JSON.stringify(message));
                 em.trigger('sendMessage', message);
             }
             return this;
