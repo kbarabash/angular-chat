@@ -4,7 +4,7 @@
     {{#repeat 3}}
         {
             "STATE": "{{faker "lorem.sentence"}}",
-            "COUNT": {{unumber 1 100}}
+            "COUNT": {{number 1 100}}
         }
     {{/repeat}}
     ],

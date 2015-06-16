@@ -3,10 +3,10 @@
         {{#repeat 25}}
          {
             "taskType":"{{or_string "Add Client Account Agency Agreement "}}",
-            "entityId":"{{faker "random.uuid"}}",
-            "trueLegalName":"{{faker "lorem.word"}} {{unumber 1 100}}",
-            "mei":"{{unumber 100000000000 129875312387}}",
-            "lei":"{{unumber 100000000000 129875312387}}"
+            "entityId":{{unumber 0 999999 screener-tasks}},
+            "trueLegalName":"{{faker "lorem.word"}} {{number 1 100}}",
+            "mei":"{{number 100000000000 129875312387}}",
+            "lei":"{{number 100000000000 129875312387}}"
          }
         {{/repeat}}
       ],

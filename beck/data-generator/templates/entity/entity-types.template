@@ -2,7 +2,7 @@
     "rows": [
         {{#repeat 25}}
         {
-            "RNUM": "{{unumber 1 100}}",
+            "RNUM": "{{number 1 100}}",
             "ID": "{{repeat_index}}",
             "NAME": "Account"
         }

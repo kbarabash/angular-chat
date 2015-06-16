@@ -28,7 +28,7 @@
     }, {
         "params": {
             "pageSize": 25,
-            "fromRow": 26,
+            "fromRow": 2,
             "filterValue": "*"
         },
         "path": "mei/mei_2.json"
@@ -46,7 +46,7 @@
     }, {
         "params": {
             "pageSize": 25,
-            "fromRow": 26,
+            "fromRow": 2,
             "filterValue": "*"
         },
         "path": "lei/lei_2.json"
@@ -64,7 +64,7 @@
     }, {
         "params": {
             "pageSize": 25,
-            "fromRow": 26,
+            "fromRow": 2,
             "filterValue": "*"
         },
         "path": "entity-type/entity-type_2.json"
@@ -82,7 +82,7 @@
     }, {
         "params": {
             "pageSize": 25,
-            "fromRow": 26,
+            "fromRow": 2,
             "filterValue": "*"
         },
         "path": "tax-readiness/tax-readiness_2.json"

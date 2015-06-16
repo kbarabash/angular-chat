@@ -1,12 +1,16 @@
 var tools = require('./tools');
 
-module.exports = function(min, max, options) {
-    if (arguments.length === 2) {
-        options = max;
-        max = min;
-        min = 0;
-    }
+var uNumbers = {};
 
+var getNumber = function(createNumFunc, key) {
+    var number = createNumFunc();
+    while (-1 !== uNumbers[key].indexOf(number)) {
+        number = createNumFunc();
+    }
+    return number;
+};
+
+module.exports = function(min, max, key) {
     var isFloat = false;
     if (typeof min === 'string') {
         isFloat = true;
@@ -14,9 +18,14 @@ module.exports = function(min, max, options) {
         max = tools.parseFloat(max);
     }
 
-    if (isFloat) {
-        return tools.randomFloat(min, max);
+    if (!uNumbers.hasOwnProperty(key)) {
+        uNumbers[key] = [];
     }
-    var n = tools.randomInt(min, max);
-    return options.hash.pad ? tools.zeroPad(n, max.toString().length) : n;
+
+    return getNumber( function() {
+        if (isFloat) {
+            return tools.randomFloat(min, max);
+        }
+        return tools.randomInt(min, max);
+    });
 };

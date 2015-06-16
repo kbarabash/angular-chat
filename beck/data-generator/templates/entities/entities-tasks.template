@@ -2,9 +2,9 @@
     "rows": [
         {{#repeat 25}}
         {
-            "RNUM": "{{unumber 1 1000}}",
+            "RNUM": "{{number 1 1000}}",
             "TASKNAME": "{{faker "lorem.sentence"}}",
-            "TASKID": "{{faker "random.uuid"}}",
+            "TASKID": {{unumber 0 999999 entities-tasks}},
             "TASKTYPE": "{{faker "lorem.sentence"}}"
         }
         {{/repeat}}

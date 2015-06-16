@@ -4,9 +4,9 @@
         {
             "DOCCATEGORYORDER": "{{repeat_index}}",
             "DOCCATEGORY": "{{faker "company.companyName"}}",
-            "DOCUMENTID": "{{faker "random.uuid"}}",
+            "DOCUMENTID": {{unumber 0 999999 documents}},
             "DOCUMENTTYPE": "{{faker "lorem.sentence"}}",
-            "DOCUMENTTYPEID": "{{unumber 1 10}}",
+            "DOCUMENTTYPEID": "{{number 1 10}}",
             "UPLOADEDBY": "{{faker "name.firstName"}} {{faker "name.lastName"}}",
             "UPLOADEDDATE": "{{or_string "null" "date.past|format{:}m/d/Y"}}"
         }

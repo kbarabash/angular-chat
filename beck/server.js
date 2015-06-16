@@ -27,10 +27,6 @@ var allowCrossDomain = function(req, res, next) {
 };
 app.use(allowCrossDomain);
 
-
-
-
-
 app.use(bodyParser.json({
     type: serverConfig.bodyParser.type
 }));

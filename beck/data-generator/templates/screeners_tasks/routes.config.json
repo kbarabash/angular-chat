@@ -3,13 +3,23 @@
     "path": [{
         "params": {
             "pageSize": 25,
-            "fromRow": 1
+            "fromRow": 1,
+            "entityName": "*",
+            "mei": "*",
+            "lei": "*",
+            "entityType": "*",
+            "taxReadiness": "*"
         },
         "path": "screeners_tasks_1.json"
     }, {
         "params": {
             "pageSize": 25,
-            "fromRow": "*"
+            "fromRow": "*",
+            "entityName": "*",
+            "mei": "*",
+            "lei": "*",
+            "entityType": "*",
+            "taxReadiness": "*"
         },
         "path": "screeners_tasks_2.json"
     }],

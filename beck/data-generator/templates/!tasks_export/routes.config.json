@@ -1,0 +1,9 @@
+[{
+    "route": "/tasks/export",
+    "path": "tasks-file.file",
+    "type": "file",
+    "metaData": {
+        "filename": "tasks-file.txt"
+    },
+    "method": "get"
+}]

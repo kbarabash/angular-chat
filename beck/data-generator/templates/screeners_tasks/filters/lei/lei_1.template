@@ -2,8 +2,8 @@
       "rows":[
         {{#repeat 25}}
          {
-            "id":"{{faker "random.uuid"}}",
-            "value":"{{unumber 100000000000 129875312387}}"
+            "id":{{unumber 0 999999 screener-tasks-lei}},
+            "value":"{{number 100000000000 129875312387}}"
          }
         {{/repeat}}
       ],

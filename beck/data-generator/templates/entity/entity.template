@@ -1,10 +1,10 @@
 {
     "rows": [
         {
-            "ENTITYID": "{{faker "random.uuid"}}",
+            "ENTITYID": {{unumber 0 999999 entity}},
             "ENTITYNAME": "{{faker "lorem.sentence"}}",
-            "MEI": "{{unumber 100000000000 129875312387}}",
-            "LEI": {{unumber 100000000000 129875312387}},
+            "MEI": "{{number 100000000000 129875312387}}",
+            "LEI": {{number 100000000000 129875312387}},
             "ENTITYTYPE": "{{faker "lorem.sentence"}}",
             "ENTITYSUBTYPE": "{{or_string "null;Some Type" ""}}",
             "COUNTRY": "{{faker "address.country"}}",
