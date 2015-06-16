@@ -1,0 +1,13 @@
+{
+    "rows": [
+    {{#repeat 1000}}
+        {
+            "RNUM": "{{repeat_index}}",
+            "ID": "{{repeat_index}}",
+            "NAME": "{{faker "name.firstName|toUpperCase"}}"
+        }
+    {{/repeat}}
+    ],
+    "paginatedRowCount": 1000,
+    "totalRowCount": 1000
+}

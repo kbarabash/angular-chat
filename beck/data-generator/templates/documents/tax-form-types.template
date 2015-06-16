@@ -1,0 +1,13 @@
+{
+    "rows": [
+        {{#repeat 182}}
+        {
+            "RNUM": "{{repeat_index}}",
+            "ID": "{{repeat_index}}",
+            "NAME": "{{faker "lorem.word|unique{:}1123123"}}"
+        }
+        {{/repeat}}
+    ],
+    "paginatedRowCount": 182,
+    "totalRowCount": 182
+}

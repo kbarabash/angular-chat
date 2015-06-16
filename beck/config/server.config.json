@@ -1,0 +1,14 @@
+{
+    "port": 8080,
+    "bodyParser": {
+        "type": "application/vnd.api+json",
+        "extended": "true"
+    },
+    "express": {
+        "static": "main/webapp/rfa-mtu/"
+    },
+    "routes": {
+        "filename": "routes.config.json",
+        "path": "./data"
+    }
+}

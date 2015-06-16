@@ -1,0 +1,17 @@
+{
+      "rows":[
+        {{#repeat 25}}
+         {
+            "entityId": "{{faker "random.uuid"}}",
+            "trueLegalName": "{{faker "lorem.word"}} {{unumber 1 50}}",
+            "mei": "{{faker "lorem.word"}}",
+            "entityType": "{{faker "lorem.word"}}",
+           "taxReadinessStatus": "{{or_string "" }}",
+            "lei": "{{unumber 30000000000000000000 34234235345446545758}}",
+            "mei": "{{faker "lorem.word"}} {{unumber 1 50}}"
+         }
+        {{/repeat}}
+      ],
+    "paginatedRowCount": 25,
+    "totalRowCount": 50
+}

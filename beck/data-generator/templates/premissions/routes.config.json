@@ -1,0 +1,25 @@
+[{
+    "route": "/entities/:entity_id/permissions",
+    "path": "counterparties.json",
+    "method": "get"
+}, {
+    "route": "/entities/:entity_id/permissions/pending",
+    "path": "pending_counterparties.json",
+    "method": "get"
+}, {
+    "route": "/entities/:entity_id/permissions",
+    "path": "counterparties.json",
+    "method": "get"
+}, {
+    "route": "/entities/:entity_id/permissions/<counterParty_id>",
+    "path": "counterparties.json",
+    "method": "get"
+}, {
+    "route": "/entities/:entity_id/permissions?all",
+    "path": "counterparties.json",
+    "method": "get"
+}, {
+    "route": "/entities/:entity_id/permissions?all",
+    "path": "counterparties.json",
+    "method": "get"
+}]

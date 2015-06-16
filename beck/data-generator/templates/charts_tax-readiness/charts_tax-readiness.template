@@ -1,0 +1,12 @@
+{
+    "rows": [
+        {{#repeat 2}}
+        {
+            "STATE": "{{or_string "Tax Prep Complete;Action Required"}}",
+            "COUNT": "{{unumber 1 100}}"
+        }
+        {{/repeat}}
+    ],
+    "paginatedRowCount": 2,
+    "totalRowCount": 2
+}

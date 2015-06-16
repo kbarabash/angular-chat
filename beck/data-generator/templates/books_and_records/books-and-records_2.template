@@ -1,0 +1,11 @@
+{
+    "root": [
+    {{#repeat 2}}
+        {
+            "ATTR_NAME": "{{faker "lorem.sentence"}}",
+            "ATTR_INDEX": {{unumber -1 1}},
+            "ATTR_VALUE": "{{or_string "No" "lorem.word"}}"
+        }
+    {{/repeat}}
+    ]
+}

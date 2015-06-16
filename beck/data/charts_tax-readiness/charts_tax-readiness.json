@@ -1,0 +1,12 @@
+{
+    "rows": [
+{
+            "STATE": "Action Required",
+            "COUNT": "87"
+        },        {
+            "STATE": "Tax Prep Complete",
+            "COUNT": "77"
+        }    ],
+    "paginatedRowCount": 2,
+    "totalRowCount": 2
+}

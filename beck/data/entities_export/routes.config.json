@@ -1,0 +1,9 @@
+[{
+    "route": "/entities/export",
+    "path": "entities-file.file",
+    "type": "file",
+    "metaData": {
+        "filename": "entities-file.txt"
+    },
+    "method": "get"
+}]

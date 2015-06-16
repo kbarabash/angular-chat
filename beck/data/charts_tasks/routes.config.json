@@ -1,0 +1,5 @@
+[{
+    "route": "/charts/tasks",
+    "path": "charts_tasks.json",
+    "method": "get"
+}]

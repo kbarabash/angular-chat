@@ -1,0 +1,17 @@
+{
+    "rows": [
+        {{#repeat 1000}}
+        {
+            "DOCCATEGORYORDER": "{{repeat_index}}",
+            "DOCCATEGORY": "{{faker "company.companyName"}}",
+            "DOCUMENTID": "{{faker "random.uuid"}}",
+            "DOCUMENTTYPE": "{{faker "lorem.sentence"}}",
+            "DOCUMENTTYPEID": "{{unumber 1 10}}",
+            "UPLOADEDBY": "{{faker "name.firstName"}} {{faker "name.lastName"}}",
+            "UPLOADEDDATE": "{{or_string "null" "date.past|format{:}m/d/Y"}}"
+        }
+        {{/repeat}}
+    ],
+    "paginatedRowCount": 1000,
+    "totalRowCount": 1000
+}

@@ -1,0 +1,24 @@
+{
+    "faker": {
+        "locale": "en"
+    },
+    "templatesExt": {
+        "from": ".template",
+        "to": ".json"
+    },
+    "copy": [
+        "routes.config.json",
+        ".file",
+        ".md"
+    ],
+    "helpers": [
+        "repeat",
+        "faker",
+        "unumber",
+        "or_string",
+        "words",
+        "repeat_index",
+        "repeat_count"
+    ],
+    "encoding": "utf8"
+}

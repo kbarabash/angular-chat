@@ -1,0 +1,26 @@
+[{
+    "route": "/entities/:entity_id/documents",
+    "path": "documents.json",
+    "method": ["get", "post"]
+}, {
+    "route": "/entities/:entity_id/documents/<document_id>",
+    "path": "documents.json",
+    "method": ["get", "post"]
+}, {
+    "route": "/options/tax-form-types",
+    "path": "tax-form-types.json",
+    "method": "get"
+}, {
+    "route": "/options/self-cert-types",
+    "path": "self-cert-types.json",
+    "method": "get"
+}, {
+    "route": "/entity/:entityId/documents",
+    "method": "POST"
+}, {
+    "route": "/taxdocuments",
+    "method": "POST"
+}, {
+    "route": "/options/evidentiary-docs",
+    "method": "get"
+}]

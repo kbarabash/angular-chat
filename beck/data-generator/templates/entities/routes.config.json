@@ -1,0 +1,9 @@
+[{
+    "route": "/entities/:entityId",
+    "path": "entities.json",
+    "method": "get"
+}, {
+    "route": "/entities/:entityId/tasks",
+    "path": "entities-tasks.json",
+    "method": "get"
+}]

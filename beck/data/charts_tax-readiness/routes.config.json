@@ -1,0 +1,5 @@
+[{
+    "route": "/charts/tax-readiness",
+    "path": "charts_tax-readiness.json",
+    "method": "get"
+}]

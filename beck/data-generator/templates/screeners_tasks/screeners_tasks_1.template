@@ -1,0 +1,15 @@
+{
+      "rows":[
+        {{#repeat 25}}
+         {
+            "taskType":"{{or_string "Add Client Account Agency Agreement "}}",
+            "entityId":"{{faker "random.uuid"}}",
+            "trueLegalName":"{{faker "lorem.word"}} {{unumber 1 100}}",
+            "mei":"{{unumber 100000000000 129875312387}}",
+            "lei":"{{unumber 100000000000 129875312387}}"
+         }
+        {{/repeat}}
+      ],
+    "paginatedRowCount": 25,
+    "totalRowCount": 50
+}

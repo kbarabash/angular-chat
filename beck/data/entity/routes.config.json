@@ -1,0 +1,12 @@
+[{
+    "route": "/entity",
+    "method": "put"
+}, {
+    "route": "/entity/:entity_id",
+    "path": "entity.json",
+    "method": "get"
+}, {
+    "route": "/options/entity-types",
+    "path": "entity-types.json",
+    "method": "get"
+}]

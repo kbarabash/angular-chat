@@ -1,0 +1,21 @@
+[{
+    "route": "/entities/1/books-and-records",
+    "path": "books-and-records_1.json",
+    "method": ["get", "put", "post"]
+}, {
+    "route": "/entities/2/books-and-records",
+    "path": "books-and-records_2.json",
+    "method": ["get", "put", "post"]
+}, {
+    "route": "/entities/:entityId/books-and-records",
+    "path": "books-and-records_1.json",
+    "method": ["get", "put", "post"]
+}, {
+    "route": "/options/tin_types",
+    "path": "tin_types.json",
+    "method": "get"
+}, {
+    "route": "/options/countries",
+    "path": "countries.json",
+    "method": "get"
+}]

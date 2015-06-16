@@ -1,0 +1,17 @@
+[{
+    "route": "/screeners/entities",
+    "path": [{
+        "params": {
+            "pageSize": 25,
+            "fromRow": 1
+        },
+        "path": "screeners_entities_1.json"
+    }, {
+        "params": {
+            "pageSize": 25,
+            "fromRow": "*"
+        },
+        "path": "screeners_entities_2.json"
+    }],
+    "method": "get"
+}]

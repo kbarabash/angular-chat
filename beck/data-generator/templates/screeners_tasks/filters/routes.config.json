@@ -1,0 +1,55 @@
+[{
+    "route": "/screeners/tasks/filters/entity-name",
+    "path": [{
+        "params": {
+            "pageSize": 25,
+            "fromRow": 1,
+            "filterValue": "*"
+        },
+        "path": "entity-name/entity-name_1.json"
+    }, {
+        "params": {
+            "pageSize": 25,
+            "fromRow": 26,
+            "filterValue": "*"
+        },
+        "path": "entity-name/entity-name_2.json"
+    }],
+    "method": "get"
+}, {
+    "route": "/screeners/tasks/filters/mei",
+    "path": [{
+        "params": {
+            "pageSize": 25,
+            "fromRow": 1,
+            "filterValue": "*"
+        },
+        "path": "mei/mei_1.json"
+    }, {
+        "params": {
+            "pageSize": 25,
+            "fromRow": 26,
+            "filterValue": "*"
+        },
+        "path": "mei/mei_2.json"
+    }],
+    "method": "get"
+}, {
+    "route": "/screeners/tasks/filters/lei",
+    "path": [{
+        "params": {
+            "pageSize": 25,
+            "fromRow": 1,
+            "filterValue": "*"
+        },
+        "path": "lei/lei_1.json"
+    }, {
+        "params": {
+            "pageSize": 25,
+            "fromRow": 26,
+            "filterValue": "*"
+        },
+        "path": "lei/lei_2.json"
+    }],
+    "method": "get"
+}]

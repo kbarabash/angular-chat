@@ -1,0 +1,91 @@
+[{
+    "route": "/screeners/entities/filters/entity-name",
+    "path": [{
+        "params": {
+            "pageSize": 25,
+            "fromRow": 1,
+            "filterValue": "*"
+        },
+        "path": "entity-name/entity-name_1.json"
+    }, {
+        "params": {
+          "pageSize": 25,
+          "fromRow": 2,
+          "filterValue": "*"
+        },
+        "path": "entity-name/entity-name_2.json"
+    }],
+    "method": "get"
+}, {
+    "route": "/screeners/entities/filters/mei",
+    "path": [{
+        "params": {
+            "pageSize": 25,
+            "fromRow": 1,
+            "filterValue": "*"
+        },
+        "path": "mei/mei_1.json"
+    }, {
+        "params": {
+            "pageSize": 25,
+            "fromRow": 26,
+            "filterValue": "*"
+        },
+        "path": "mei/mei_2.json"
+    }],
+    "method": "get"
+}, {
+    "route": "/screeners/entities/filters/lei",
+    "path": [{
+        "params": {
+            "pageSize": 25,
+            "fromRow": 1,
+            "filterValue": "*"
+        },
+        "path": "lei/lei_1.json"
+    }, {
+        "params": {
+            "pageSize": 25,
+            "fromRow": 26,
+            "filterValue": "*"
+        },
+        "path": "lei/lei_2.json"
+    }],
+    "method": "get"
+}, {
+    "route": "/screeners/entities/filters/entity-type",
+    "path": [{
+        "params": {
+            "pageSize": 25,
+            "fromRow": 1,
+            "filterValue": "*"
+        },
+        "path": "entity-type/entity-type_1.json"
+    }, {
+        "params": {
+            "pageSize": 25,
+            "fromRow": 26,
+            "filterValue": "*"
+        },
+        "path": "entity-type/entity-type_2.json"
+    }],
+    "method": "get"
+}, {
+    "route": "/screeners/entities/filters/tax-readiness",
+    "path": [{
+        "params": {
+            "pageSize": 25,
+            "fromRow": 1,
+            "filterValue": "*"
+        },
+        "path": "tax-readiness/tax-readiness_1.json"
+    }, {
+        "params": {
+            "pageSize": 25,
+            "fromRow": 26,
+            "filterValue": "*"
+        },
+        "path": "tax-readiness/tax-readiness_2.json"
+    }],
+    "method": "get"
+}]

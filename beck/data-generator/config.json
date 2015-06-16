@@ -1,0 +1,5 @@
+{
+    "dest": "./../data",
+    "templates": "./templates/",
+    "encoding": "utf8"
+}

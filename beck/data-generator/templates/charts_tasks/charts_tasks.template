@@ -1,0 +1,13 @@
+{
+    "rows":
+    [
+    {{#repeat 3}}
+        {
+            "STATE": "{{faker "lorem.sentence"}}",
+            "COUNT": {{unumber 1 100}}
+        }
+    {{/repeat}}
+    ],
+    "paginatedRowCount": 3,
+    "totalRowCount": 3
+}

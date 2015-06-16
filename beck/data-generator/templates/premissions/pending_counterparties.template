@@ -1,0 +1,12 @@
+{
+    "rows": [
+        {{#repeat 1100}}
+        {
+            "COUNTERPARTYID": "{{repeat_index}}",
+            "COUNTERPARTYNAME": "{{faker "company.companyName|unique{:}123123"}}"
+        }
+        {{/repeat}}
+    ],
+    "paginatedRowCount": 1100,
+    "totalRowCount": 1100
+}

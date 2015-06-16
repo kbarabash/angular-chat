@@ -1,0 +1,13 @@
+{
+    "rows": [
+        {{#repeat 50}}
+        {
+            "RNUM": "{{repeat_index}}",
+            "ID": "{{repeat_index}}",
+            "NAME": "{{faker "address.country|unique{:}13"}}"
+        }
+        {{/repeat}}
+    ],
+    "paginatedRowCount": 50,
+    "totalRowCount": 50
+}
