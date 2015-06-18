@@ -1,9 +1,9 @@
 [{
     "route": "/tasks/export",
-    "path": "tasks-file.file",
+    "path": "tasks-file.xlsx",
     "type": "file",
     "metaData": {
-        "filename": "tasks-file.txt"
+        "filename": "Export_12.12.2015_Task.xlsx"
     },
     "method": "get"
 }]

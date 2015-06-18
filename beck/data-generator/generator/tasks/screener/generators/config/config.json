@@ -1,0 +1,23 @@
+{
+    "lei": {
+        "length": 12
+    },
+    "mei": {
+        "length": 10
+    },
+    "entityType": {
+        "length": 8
+    },
+    "entityName": {
+        "length": 67
+    },
+    "taxReadiness": {
+        "length": 18
+    },
+    "entities": {
+        "length": 67
+    },
+    "tasks": {
+        "length": 93
+    }
+}

@@ -2,7 +2,7 @@
     "rows": [
         {{#repeat 2}}
         {
-            "STATE": "{{or_string "Tax Prep Complete;Action Required"}}",
+            "STATE": "{{or_string "Tax Prep Complete" "Action Required"}}",
             "COUNT": "{{number 1 100}}"
         }
         {{/repeat}}

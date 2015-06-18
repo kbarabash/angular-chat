@@ -9,17 +9,26 @@
     "copy": [
         "routes.config.json",
         ".file",
+        ".xls",
         ".md"
     ],
     "helpers": [
-        "repeat",
+        "entity",
         "faker",
         "number",
-        "unumber",
         "or_string",
-        "words",
+        "repeat",
         "repeat_index",
-        "repeat_count"
+        "repeat_count",
+        "unumber",
+        "word"
     ],
-    "encoding": "utf8"
+    "isDebug": false,
+    "encoding": "utf8",
+    "tasks": [
+        "screener"
+    ],
+    "routes": [
+        "data-generator/generator/routes/screener/screener"
+    ]
 }

@@ -6,14 +6,14 @@
             "MEI": "{{number 100000000000 129875312387}}",
             "LEI": {{number 100000000000 129875312387}},
             "ENTITYTYPE": "{{faker "lorem.sentence"}}",
-            "ENTITYSUBTYPE": "{{or_string "null;Some Type" ""}}",
+            "ENTITYSUBTYPE": "{{or_string "null" "Some Type"}}",
             "COUNTRY": "{{faker "address.country"}}",
             "CLIENTIDENTIFER": "{{faker "lorem.word"}}",
-            "BOOKS_AND_RECORD_COMPLETED": "{{or_string "false;true" ""}}",
-            "CLIENT_ACCOUNT_AA_COMPLETED": "{{or_string "false;true" ""}}",
-            "VS_TAX_FORM_COMPLETED": "{{or_string "false;true" ""}}",
-            "VS_SELF_CERT_COMPLETED": "{{or_string "false;true" ""}}",
-            "PERMISSIONS_COMPLETED": "{{or_string "false;true" ""}}"
+            "BOOKS_AND_RECORD_COMPLETED": "{{or_string "false" "true"}}",
+            "CLIENT_ACCOUNT_AA_COMPLETED": "{{or_string "false" "true"}}",
+            "VS_TAX_FORM_COMPLETED": "{{or_string "false" "true"}}",
+            "VS_SELF_CERT_COMPLETED": "{{or_string "false" "true"}}",
+            "PERMISSIONS_COMPLETED": "{{or_string "false" "true"}}"
         }
     ],
     "paginatedRowCount": 1,

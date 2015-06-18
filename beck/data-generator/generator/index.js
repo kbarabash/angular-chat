@@ -4,6 +4,7 @@ var handlebars = require('handlebars');
 var faker = require('faker');
 var CONFIG = require('./config/config');
 var helpers = require('./helpers');
+var taskRunner = require('./task-runner');
 
 faker.locale = CONFIG.faker.locale;
 
@@ -34,17 +35,17 @@ var configValidator = function(config) {
 };
 
 var buildFile = function(path, encoding) {
+    console.log('Compile file: ' + path);
     var fileData = fs.readFileSync(path, {
         encoding: encoding
     });
 
-    var result = '';
-    if (fileData) {
-        helpers.load();
-        result = handlebars.compile(fileData)();
+    if (!fileData) {
+        return '';
     }
 
-    return result;
+    helpers.load();
+    return handlebars.compile(fileData)();
 };
 
 var copy = function(from, to) {
@@ -103,13 +104,18 @@ module.exports = function(config, callback) {
         config.encoding = CONFIG.encoding;
     }
 
+    var cb = function() {
+        taskRunner.run(CONFIG.tasks);
+        callback && callback.apply(null, arguments);
+    };
+
     if (fs.existsSync(config.dest)) {
         rmDir(config.dest, function startWork() {
-            readDirAndBuild(config, callback)
+            readDirAndBuild(config, cb)
         });
         return;
     }
 
-    readDirAndBuild(config, callback);
+    readDirAndBuild(config, cb);
 };
 

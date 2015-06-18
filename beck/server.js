@@ -30,6 +30,9 @@ app.use(allowCrossDomain);
 app.use(bodyParser.json({
     type: serverConfig.bodyParser.type
 }));
+
+routes.initRouteFromGenerator(app);
+
 (function loadRoutes(path) {
     fs.readdirSync(path).forEach(function(file) {
         var curPath = path + '/' + file;

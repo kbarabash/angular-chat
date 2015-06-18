@@ -1,0 +1,6 @@
+[{
+    "dest": "../../../../data/screener",
+    "encode": "utf8",
+    "routeFileName": "routes.config.json",
+    "dataStructFile": "data.json"
+}]

@@ -1,9 +1,9 @@
 [{
     "route": "/entities/export",
-    "path": "entities-file.file",
+    "path": "entities-file.xlsx",
     "type": "file",
     "metaData": {
-        "filename": "entities-file.txt"
+        "filename": "Export_12.12.2015_Entities.xlsx"
     },
     "method": "get"
 }]

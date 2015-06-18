@@ -1,17 +1,45 @@
 {
     "rows": [
-        {{#repeat 1000}}
         {
-            "DOCCATEGORYORDER": "{{repeat_index}}",
-            "DOCCATEGORY": "{{faker "company.companyName"}}",
-            "DOCUMENTID": {{unumber 0 999999 documents}},
-            "DOCUMENTTYPE": "{{faker "lorem.sentence"}}",
-            "DOCUMENTTYPEID": "{{number 1 10}}",
-            "UPLOADEDBY": "{{faker "name.firstName"}} {{faker "name.lastName"}}",
-            "UPLOADEDDATE": "{{or_string "null" "date.past|format{:}m/d/Y"}}"
+            "DOCCATEGORYORDER": "1",
+            "DOCCATEGORY": "Validation Status",
+            "DOCUMENTID": "337618654477707",
+            "DOCUMENTTYPE": "Client Agency Agreement",
+            "DOCUMENTTYPEID": "1",
+            "UPLOADEDBY": "Jack Sparrow",
+            "UPLOADEDDATE": "06/08/2015"
+
+        },
+        {
+            "DOCCATEGORYORDER": "2",
+            "DOCCATEGORY": "Validation Status",
+            "DOCUMENTID": null,
+            "DOCUMENTTYPE": "Tax Form",
+            "DOCUMENTTYPEID": "3",
+            "UPLOADEDBY": null,
+            "UPLOADEDDATE": null
+
+        },
+        {
+            "DOCCATEGORYORDER": "3",
+            "DOCCATEGORY": "Recommended",
+            "DOCUMENTID": null,
+            "DOCUMENTTYPE": "Articles of Incorporation",
+            "DOCUMENTTYPEID": "5",
+            "UPLOADEDBY": null,
+            "UPLOADEDDATE": null
+
+        },  {
+            "DOCCATEGORYORDER": "4",
+            "DOCCATEGORY": "Optional",
+            "DOCUMENTID": null,
+            "DOCUMENTTYPE": "Court Notice or Decree",
+            "DOCUMENTTYPEID": "6",
+            "UPLOADEDBY": null,
+            "UPLOADEDDATE": null
+
         }
-        {{/repeat}}
     ],
-    "paginatedRowCount": 1000,
-    "totalRowCount": 1000
+    "paginatedRowCount": 2,
+    "totalRowCount": 2
 }

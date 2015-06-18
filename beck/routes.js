@@ -2,6 +2,7 @@
 
 var path = require('path');
 var url = require('url');
+var generatorConfig = require('./data-generator/generator/config/config.json');
 
 var TYPES = {
     FILE: 'file'
@@ -53,6 +54,16 @@ var sendOK = function(res, rootPath, filePath, routeData) {
     res.status(200).send('OK');
 };
 
+var initRouteFromGenerator = function (app) {
+    var length = generatorConfig.routes.length;
+    for (var i = 0; i < length; i++) {
+        var obj = require('./' + generatorConfig.routes[i]);
+        if (obj) {
+            obj.init(app);
+        }
+    }
+};
+
 var initRoutes = function(app, options) {
     app[options.method](options.routeData.route, function(req, res) {
         addCORSHeaders(res);
@@ -83,6 +94,7 @@ var initRoutes = function(app, options) {
 };
 
 module.exports = {
+    initRouteFromGenerator: initRouteFromGenerator,
     appendErrorHandler: function(app) {
         app.use(function errorHandler(err, req, res, next) {
             addCORSHeaders(res);
@@ -102,7 +114,6 @@ module.exports = {
                 status: 404,
                 details: {
                     error: 'Not found',
-                    url: req.originalUrl
                 }
             });
         });
@@ -111,7 +122,6 @@ module.exports = {
         if (!routesConfig) {
             return;
         }
-
         for (var i = 0, l = routesConfig.length; i < l; i++) {
             (function addroute(routeData) {
                 var method = routeData.method;

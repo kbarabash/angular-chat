@@ -1,0 +1,40 @@
+{
+    "dataPath": "../../../../data/screener/data.json",
+    "filters": {
+        "route": "/screeners/:type/filters/:name",
+        "defaultQuery": {
+            "pageSize": 12,
+            "fromRow": 1,
+            "filterValue": "value"
+        },
+        "filters": {
+            "filterValue": "value"
+        }
+    },
+    "entities": {
+        "route": "/screeners/entities",
+        "defaultQuery": {
+            "pageSize": 12,
+            "fromRow": 1
+        },
+        "filters": {
+            "entityName": "trueLegalName",
+            "mei": "mei",
+            "lei": "lei",
+            "entityType": "entityType",
+            "taxReadiness": "taxReadinessStatus"
+        }
+    },
+    "tasks": {
+        "route": "/screeners/tasks",
+        "defaultQuery": {
+            "pageSize": 12,
+            "fromRow": 1
+        },
+        "filters": {
+            "entityName": "trueLegalName",
+            "mei": "mei",
+            "lei": "lei"
+        }
+    }
+}

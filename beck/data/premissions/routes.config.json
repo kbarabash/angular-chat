@@ -1,7 +1,6 @@
 [{
-    "route": "/entities/:entity_id/permissions",
-    "path": "counterparties.json",
-    "method": "get"
+    "route": "/entities/:entityId/permissions",
+    "method": "put"
 }, {
     "route": "/entities/:entity_id/permissions/pending",
     "path": "pending_counterparties.json",
